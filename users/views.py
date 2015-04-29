@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from articles.models import Article
+from django.core.mail import send_mail
 
 def index(request):
   context = dict()

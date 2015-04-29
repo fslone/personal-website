@@ -30,7 +30,8 @@
     CONTACT
   </div>
   <div class="contact-form">
-    <form action="{% url 'users.views.contact' %}" id="contactform">
+    <form action="{% url 'users.views.contact' %}"  method="post" id="contactform">
+	{% csrf_token %}
 		<input type="text" name="name" id="name" placeholder="Name" class="contact-input" onblur="confirmName()">
 		<input type="email" name="email" id="email" placeholder="Email" class="contact-input" onblur="confirmEmail()">
 		<br />
