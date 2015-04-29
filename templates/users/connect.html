@@ -30,14 +30,16 @@
     CONTACT
   </div>
   <div class="contact-form">
-	<input type="text" name="name" placeholder="Name" class="contact-input">
-	<input type="email" name="email" placeholder="Email" class="contact-input">
-	<br />
-	<textarea name="message" placeholder="Message" class="contact-textarea"></textarea>
-	<br />
-	<div class="contact-submit">
-		Submit
-	</div>
+    <form action="{% url 'users.views.contact' %}" id="contactform">
+		<input type="text" name="name" id="name" placeholder="Name" class="contact-input" onblur="confirmName()">
+		<input type="email" name="email" id="email" placeholder="Email" class="contact-input" onblur="confirmEmail()">
+		<br />
+		<textarea name="message" id="message" placeholder="Message" class="contact-textarea" onblur="confirmMessage()"></textarea>
+		<br />
+		<div class="contact-submit" onclick="submit_signup()">
+			Submit
+		</div>
+	</form>
   </div>
 
 {% endblock content %}

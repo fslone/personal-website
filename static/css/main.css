@@ -389,6 +389,9 @@ a.social-share:hover{
 	font-family: 'Hind', sans-serif;
 	padding:5px;
 }
+.unsuccessful{
+	border:2px solid red!important;
+}
 @media (min-width:700px){
 .contact-textarea{
 	width:638px;

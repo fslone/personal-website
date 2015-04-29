@@ -39,3 +39,8 @@ def connect(request):
   context = dict()
   context['pagetitle'] = 'Connect'
   return render(request, 'users/connect.html', context)
+  
+def contact(request):
+  context = dict()
+  context['pagetitle'] = 'Connect'
+  return render(request, 'users/thanks.html', context)
