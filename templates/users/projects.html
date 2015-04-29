@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Projects | Eric Slone{% endblock title %}
+
+{% block content %}  
+
+  <div class="page-headline">
+	I've had the privilege to work on two great startups, numerous short-term client websites, and found the time for a few personal endeavors.
+  </div>
+  <div class="latest-posts">
+    PROJECTS
+  </div>
+  <div class="projects-container">
+    <a href="/project/thoughtblox/">
+      <img src="{% static 'images/tb.jpg' %}" alt="Thoughtblox Logo" class="projects-images">
+	</a>
+	<a href="/project/dinnercrunch/">
+      <img src="{% static 'images/dc.jpg' %}" alt="DinnerCrunch Logo" class="projects-images">
+	</a>
+	<br /> 
+	<a href="/project/stockprodotco/">
+      <img src="{% static 'images/sp.jpg' %}" alt="StockPro.co Logo" class="projects-images">
+	</a>
+	<a href="/project/centerforspacesystems/">
+      <img src="{% static 'images/css.jpg' %}" alt="Center for Space Systems Logo" class="projects-images">
+	</a>
+	<br /> 
+	<a href="/project/onesideone/">
+      <img src="{% static 'images/oso.jpg' %}" alt="One Side One Logo" class="projects-images"><br />
+	</a>
+	<div class="this-site">
+		<a href="/project/site/">
+			(and of course the site you're looking at)
+		</a>
+	</div>
+  </div>
+
+{% endblock content %}

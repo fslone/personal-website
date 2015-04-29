@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Journal | Eric Slone{% endblock title %}
+
+{% block content %}  
+	{% for article in articles %}
+		<div class="journal-article-top">
+		</div>
+		<div class="journal-article-title">
+			<a href="/post/{{ article.id }}/{{ article.article_slug }}/" class="home-article-title-link">
+				{{ article.article_title }}
+			</a>
+		</div>
+		<div class="journal-page-date">
+			{{ article.article_upload_date }}
+		</div>
+	{% endfor %}
+{% endblock content %}

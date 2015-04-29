@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Connect | Eric Slone{% endblock title %}
+
+{% block content %}  
+
+  <div class="page-headline">
+	Let's work together. Connect with social media or give me a shout using the form below.
+  </div>
+  <div class="social-center">
+	<a href="https://www.linkedin.com/pub/eric-slone/38/109/986" class="social-center-link" target="_blank">
+		<span class="fa fa-linkedin-square social-icons" style="padding-left:0px;">
+		</span>
+	</a>
+	<a href="https://instagram.com/eric.slone/" class="social-center-link" target="_blank">
+		<span class="fa fa-instagram social-icons">
+		</span>
+	</a>
+	<a href="https://github.com/ericslone" class="social-center-link" target="_blank">
+		<span class="fa fa-github-square social-icons">
+		</span>
+	</a>
+	<a href="#" class="social-center-link" target="_blank">
+		<span class="fa fa-twitter-square social-icons">
+		</span>
+	</a>
+  </div>
+  <div class="latest-posts">
+    CONTACT
+  </div>
+  <div class="contact-form">
+	<input type="text" name="name" placeholder="Name" class="contact-input">
+	<input type="email" name="email" placeholder="Email" class="contact-input">
+	<br />
+	<textarea name="message" placeholder="Message" class="contact-textarea"></textarea>
+	<br />
+	<div class="contact-submit">
+		Submit
+	</div>
+  </div>
+
+{% endblock content %}

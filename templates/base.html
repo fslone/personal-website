@@ -1,0 +1,174 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	
+	<!-- Loading CSS -->
+	<link href="{% static 'css/main.css' %}" rel="stylesheet">
+	
+	<!-- Loading Font Awesome -->
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	
+	<!-- Google fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Quattrocento' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+	
+	<!-- Shortcut Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+	
+	<!-- Loading JQuery -->
+    <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+
+  </head>
+  <body>
+  <!--******************** SOCIAL SCRIPT ********************-->
+  
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) return;
+	js = d.createElement(s); js.id = id;
+	js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+	fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+  </script>
+  
+  
+  
+  
+  <!--******************** NAV ********************-->
+  <div class="nav-wrapper">
+    <div class="pull-left nav-name">
+		<a href="{% url 'users.views.index' %}" class="nav-name">
+			Eric Slone
+		</a>
+	</div>
+	<div class="pull-right">
+		<a href="{% url 'users.views.about' %}" class="nav-buttons" {% if pagetitle == 'About' %}style="color:#c83424;"{% endif %}>
+			About
+		</a>
+		<a href="{% url 'users.views.projects' %}" class="nav-buttons" {% if pagetitle == 'Projects' %}style="color:#c83424;"{% endif %}>
+			Projects
+		</a>
+		<a href="{% url 'users.views.journal' %}" class="nav-buttons" {% if pagetitle == 'Journal' %}style="color:#c83424;"{% endif %}>
+			Journal
+		</a>
+		<a href="{% url 'users.views.connect' %}" class="nav-buttons" {% if pagetitle == 'Connect' %}style="color:#c83424;"{% endif %}>
+			Connect
+		</a>
+		<div class="nav-menu">
+			<span class="fa fa-bars" id="slide">
+			</span>
+		</div>
+	</div>
+  </div>
+  <div class="slider">
+	<span class="fa fa-times" id="slide2">
+	</span>
+	<br />
+	<div class="slider-text-box" style="margin-top:20px;">
+		<div class="slider-text">
+			<a href="{% url 'users.views.index' %}" class="slider-link">
+				Home
+			</a>
+		</div>
+	</div>
+	<div class="slider-text-box" style="margin-top:20px;">
+		<div class="slider-text">
+			<a href="{% url 'users.views.about' %}" class="slider-link">
+				About
+			</a>
+		</div>
+	</div>
+	<div class="slider-text-box" style="margin-top:20px;">
+		<div class="slider-text">
+			<a href="{% url 'users.views.projects' %}" class="slider-link">
+				Projects
+			</a>
+		</div>
+	</div>
+	<div class="slider-text-box" style="margin-top:20px;">
+		<div class="slider-text">
+			<a href="{% url 'users.views.journal' %}" class="slider-link">
+				Journal
+			</a>
+		</div>
+	</div>
+	<div class="slider-text-box" style="margin-top:20px;">
+		<div class="slider-text">
+			<a href="{% url 'users.views.connect' %}" class="slider-link">
+				Connect
+			</a>
+		</div>
+	</div>
+  </div>
+  
+  <!--******************** MAIN ********************-->
+  <div class="main-content">
+	{% block content %}{% endblock %}<br />
+  </div>
+  
+  <!--******************** FOOTER ********************-->
+  <div class="footer">
+	<div class="footer-left">
+		&copy; {% now 'Y' %} Eric Slone.<br />
+		<a href="/project/site/" class="footer-links">Built</a> on <a href="https://www.djangoproject.com/" class="footer-links" target="_blank">Django</a> in <a href="http://www.midtownatl.com/" class="footer-links" target="_blank">Midtown ATL</a>.<br />
+	</div>
+	<div class="footer-right">
+		<a href="https://www.linkedin.com/pub/eric-slone/38/109/986" class="footer-links" target="_blank">
+			<span class="fa fa-linkedin-square social-icons"  style="padding-left:0px;">
+			</span>
+		</a>
+		<a href="https://instagram.com/eric.slone/" class="footer-links" target="_blank">
+			<span class="fa fa-instagram social-icons">
+			</span>
+		</a>
+		<a href="https://github.com/ericslone" class="footer-links" target="_blank">
+			<span class="fa fa-github-square social-icons">
+			</span>
+		</a>
+		<a href="#" class="footer-links" target="_blank">
+			<span class="fa fa-twitter-square social-icons">
+			</span>
+		</a>
+		<a href="http://www.piedpiper.com/" class="footer-links" target="_blank">
+			<span class="fa fa-pied-piper social-icons">
+			</span>
+		</a>
+	</div>
+  
+  </div>
+  
+  <!-- Analytics -->
+  
+  
+  
+	<!-- Loading JavaScript -->
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+  
+  </body>
+</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

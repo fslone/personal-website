@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Eric Slone{% endblock title %}
+
+{% block content %}  
+
+  <div class="header-image" style="background: url({% static 'images/head.jpg' %}); background-size:cover;">
+	<div class="header-large-text">
+		Eric writes code.
+	</div>
+	<div class="header-small-text">
+		(and attempts other things)
+	</div>
+  </div>
+  
+  <div class="latest-posts">
+    LATEST POST
+  </div>
+  {% for article in articles|slice:":1" %}
+	<div class="home-article-title">
+		<a href="/post/{{ article.id }}/{{ article.article_slug }}/" class="home-article-title-link">
+			{{ article.article_title }}
+		</a>
+	</div>
+	<div class="home-article-date">
+		{{ article.article_upload_date }}
+	</div>
+  {% endfor %}
+
+{% endblock content %}

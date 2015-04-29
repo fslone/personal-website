@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Journal | Eric Slone{% endblock title %}
+
+{% block content %}  
+	<div class="journal-article-top">
+	</div>
+	<div class="journal-article-title">
+		{{ article.article_title }}
+	</div>
+	<div class="journal-article-date">
+		{{ article.article_upload_date }}
+	</div>
+	<div class="social-holder">
+		<a class="social-share" href="http://www.facebook.com/sharer/sharer.php?u=http://ericslone.io/post/{{ article.id }}/{{ article.article_slug }}/" target="_blank">
+			<span class="fa fa-facebook-square">
+			</span>
+		</a>
+		<a class="social-share" href="https://twitter.com/home?status={{ article.article_title|urlencode }}%20http://www.ericslone.io/post/{{ article.id }}/{{ article.article_slug }}/" target="_blank">
+			<span class="fa fa-twitter-square">
+			</span>
+		</a>
+		<a class="social-share" href="http://www.tumblr.com/share?v=3&u=http://ericslone.io/post/{{ article.id }}/{{ article.article_slug }}/&t={{ article.article_title|urlencode }}" target="_blank">
+			<span class="fa fa-tumblr-square">
+			</span>
+		</a>
+		<a class="social-share" href="http://www.reddit.com/submit?url=http://ericslone.io/post/{{ article.id }}/{{ article.article_slug }}/&title={{ article.article_title|urlencode }}" target="_blank">
+			<span class="fa fa-reddit-square">
+			</span>
+		</a>
+		<a class="social-share" href="https://www.linkedin.com/shareArticle?mini=true&url=http://ericslone.io/post/{{ article.id }}/{{ article.article_slug }}/&title={{ article.article_title|urlencode }}&summary=&source=" target="_blank">
+			<span class="fa fa-linkedin-square">
+			</span>
+		</a>
+	</div>
+	<div class="article-text">
+		{{ article.article_text|safe }}
+	</div>
+{% endblock content %}
