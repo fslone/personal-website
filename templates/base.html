@@ -35,14 +35,14 @@
 		</a>
 	</div>
 	<div class="pull-right">
-		<a href="{% url 'users.views.about' %}" class="nav-buttons" {% if pagetitle == 'About' %}style="color:#c83424;"{% endif %}>
-			About
+		<a href="{% url 'users.views.journal' %}" class="nav-buttons" {% if pagetitle == 'Journal' %}style="color:#c83424;"{% endif %}>
+			Journal
 		</a>
 		<a href="{% url 'users.views.projects' %}" class="nav-buttons" {% if pagetitle == 'Projects' %}style="color:#c83424;"{% endif %}>
 			Projects
 		</a>
-		<a href="{% url 'users.views.journal' %}" class="nav-buttons" {% if pagetitle == 'Journal' %}style="color:#c83424;"{% endif %}>
-			Journal
+		<a href="{% url 'users.views.about' %}" class="nav-buttons" {% if pagetitle == 'About' %}style="color:#c83424;"{% endif %}>
+			About
 		</a>
 		<a href="{% url 'users.views.connect' %}" class="nav-buttons" {% if pagetitle == 'Connect' %}style="color:#c83424;"{% endif %}>
 			Connect
@@ -66,8 +66,8 @@
 	</div>
 	<div class="slider-text-box" style="margin-top:20px;">
 		<div class="slider-text">
-			<a href="{% url 'users.views.about' %}" class="slider-link">
-				About
+			<a href="{% url 'users.views.journal' %}" class="slider-link">
+				Journal
 			</a>
 		</div>
 	</div>
@@ -80,8 +80,8 @@
 	</div>
 	<div class="slider-text-box" style="margin-top:20px;">
 		<div class="slider-text">
-			<a href="{% url 'users.views.journal' %}" class="slider-link">
-				Journal
+			<a href="{% url 'users.views.about' %}" class="slider-link">
+				About
 			</a>
 		</div>
 	</div>
