@@ -34,6 +34,11 @@
 			</span>
 		</a>
 	</div>
+	{% if article.article_image %}
+		<div class="article-text">
+			<img src="{{ article.article_image.url }}" alt="{{ article.article_title }}" style="width:100%">
+		</div>
+	{% endif %}
 	<div class="article-text">
 		{{ article.article_text|safe }}
 	</div>
