@@ -47,6 +47,6 @@ def contact(request):
   email = request.POST['email']
   message = request.POST['message']
   send_content = "Name: " + name + "\n\nEmail: " + email + "\n\nMessage: " + message
-  send_mail('ericslone.io Contact Form', send_content, 'Eric Slone <info@ericslone.io>', ['eric@thoughtblox.com'], fail_silently=True)
+  send_mail('Contact Form', send_content, 'Eric Slone <eric@ericslone.io>', ['eric@ericslone.io'], fail_silently=False)
   context['pagetitle'] = 'Connect'
   return render(request, 'users/thanks.html', context)
