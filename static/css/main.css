@@ -507,10 +507,16 @@ a.social-share:hover{
 }
 .code{
 	font-family: 'Source Code Pro';
+	display: inline-block;
+	background:#ededed;
+	text-align:left!important;
+	width:100%;
+	padding:5px;
+}
+.inline-code{
+	font-family: 'Source Code Pro';
 	display: inline;
 	background:#ededed;
-	text-align:left;
 }
-
 
 
