@@ -4,6 +4,9 @@ from django.contrib import admin
 import users
 admin.autodiscover()
 
+handler404 = 'users.views.handler404'
+handler500 = 'users.views.handler500'
+
 urlpatterns = patterns('',
     url(r'^$', 'users.views.index', name='index'),
     url(r'^about/', 'users.views.about', name='about'),

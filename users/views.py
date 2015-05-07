@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, render_to_response
+from django.template import RequestContext
 from articles.models import Article
 from django.core.mail import send_mail
 
@@ -60,3 +61,12 @@ def contact(request):
   send_mail('Contact Form', send_content, 'Eric Slone <eric@ericslone.io>', ['eric@ericslone.io'], fail_silently=False)
   context['pagetitle'] = 'Connect'
   return render(request, 'users/thanks.html', context)
+  
+def handler404(request):
+  context = dict()
+  return render(request, 'users/404.html', context)
+
+
+def handler500(request):
+  context = dict()
+  return render(request, 'users/500.html', context)

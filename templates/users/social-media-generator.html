@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Social Media Link Generator | Eric Slone{% endblock title %}
+
+{% block content %}  
+	<div class="journal-article-top">
+	</div>
+	<div class="journal-article-title">
+		Social Media Link Generator
+	</div>
+	<div class="journal-article-date">
+		May 7, 2015
+	</div>
+	<div class="social-holder">
+		<a class="social-share" href="http://www.facebook.com/sharer/sharer.php?u=http://ericslone.io/social-media-link-generator/" target="_blank">
+			<span class="fa fa-facebook-square">
+			</span>
+		</a>
+		<a class="social-share" href="https://twitter.com/home?status=Social%20media%20link%20generator:%20http://www.ericslone.io/social-media-link-generator/%20@ericwritescode" target="_blank">
+			<span class="fa fa-twitter-square">
+			</span>
+		</a>
+		<a class="social-share" href="http://www.tumblr.com/share?v=3&u=http://ericslone.io/social-media-link-generator/&t=Social%20Media%20Link%20Generator" target="_blank">
+			<span class="fa fa-tumblr-square">
+			</span>
+		</a>
+		<a class="social-share" href="http://www.reddit.com/submit?url=http://ericslone.io/social-media-link-generator/&title=Social%20Media%20Link%20Generator" target="_blank">
+			<span class="fa fa-reddit-square">
+			</span>
+		</a>
+		<a class="social-share" href="https://www.linkedin.com/shareArticle?mini=true&url=http://ericslone.io/social-media-link-generator/&title=Social%20Media%20Link%20Generator&summary=&source=" target="_blank">
+			<span class="fa fa-linkedin-square">
+			</span>
+		</a>
+	</div>
+	{% if article.article_image %}
+		<div class="article-text">
+			<img src="{{ article.article_image.url }}" alt="{{ article.article_title }}" style="width:100%">
+		</div>
+	{% endif %}
+	<div class="article-text">
+		{{ article.article_text|safe }}
+	</div>
+{% endblock content %}
