@@ -41,6 +41,9 @@
 		<a href="{% url 'users.views.journal' %}" class="nav-buttons" {% if pagetitle == 'Journal' %}style="color:#c83424;"{% endif %}>
 			Journal
 		</a>
+		<a href="{% url 'users.views.tools' %}" class="nav-buttons" {% if pagetitle == 'Tools' %}style="color:#c83424;"{% endif %}>
+			Tools
+		</a>
 		<a href="{% url 'users.views.projects' %}" class="nav-buttons" {% if pagetitle == 'Projects' %}style="color:#c83424;"{% endif %}>
 			Projects
 		</a>
@@ -71,6 +74,13 @@
 		<div class="slider-text">
 			<a href="{% url 'users.views.journal' %}" class="slider-link">
 				Journal
+			</a>
+		</div>
+	</div>
+	<div class="slider-text-box" style="margin-top:20px;">
+		<div class="slider-text">
+			<a href="{% url 'users.views.tools' %}" class="slider-link">
+				Tools
 			</a>
 		</div>
 	</div>

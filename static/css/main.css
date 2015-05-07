@@ -115,23 +115,16 @@ a.slider-link:hover{
 	padding-right:20px;
 }
 }
-@media (min-width: 675px) {
+@media (min-width: 755px) {
 .nav-buttons{
 	padding-left:35px;
 	display:inline;
 }
-}
-@media (max-width: 674px) {
-.nav-buttons{
-	display:none;
-}
-}
-@media (min-width: 675px) {
 .nav-menu{
 	display:none;
 }
 }
-@media (max-width: 674px) {
+@media (max-width: 754px) {
 .nav-menu{
 	display:block;
 	padding-left:35px;
@@ -144,6 +137,9 @@ a.nav-menu-button{
 a.nav-menu-button:hover{
 	color:#c83424;
 	text-decoration:none;
+}
+.nav-buttons{
+	display:none;
 }
 }
 a.nav-buttons{

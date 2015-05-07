@@ -29,6 +29,16 @@ def journal(request):
   context['pagetitle'] = 'Journal'
   context['articles'] = Article.objects.all().order_by('-id')
   return render(request, 'users/journal.html', context)
+
+def tools(request):
+  context = dict()
+  context['pagetitle'] = 'Tools'
+  return render(request, 'users/tools.html', context)
+  
+def social_media(request):
+  context = dict()
+  context['pagetitle'] = 'Tools'
+  return render(request, 'users/social-media-generator.html', context)
   
 def article(request, postid, articleslug):
   context = dict()
