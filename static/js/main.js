@@ -16,69 +16,69 @@ $('#slide2').click(function(){
 });
 
 function confirmName() {
-	var name = document.getElementById("name").value;
-	var namefield = document.getElementById("name");
+	var name = $('#name').val();
+	var nameField = $('#name');
 	if(name){
 		nameVerified = true;
-		if($('#name').hasClass("unsuccessful")){
-			$('#name').removeClass("unsuccessful");
+		if(nameField.hasClass("unsuccessful")){
+			nameField.removeClass("unsuccessful");
 		}
 	}
 	else{
-		if(!$('#name').hasClass("unsuccessful")) {
-			$('#name').addClass("unsuccessful");
+		if(!nameField.hasClass("unsuccessful")) {
+			nameField.addClass("unsuccessful");
 		}
-		namefield.setAttribute("placeholder", "Name is required");
+		nameField.prop("placeholder", "Name is required");
 	}
 };
 
 function confirmMessage() {
-	var message = document.getElementById("message").value;
-	var messagefield = document.getElementById("message");
+	var message = $('#message').val();
+	var messageField = $('#message');
 	if(message){
 		messageVerified = true;
-		if($('#message').hasClass("unsuccessful")){
-			$('#message').removeClass("unsuccessful");
+		if(messageField.hasClass("unsuccessful")){
+			messageField.removeClass("unsuccessful");
 		}
 	}
 	else{
-		if(!$('#message').hasClass("unsuccessful")) {
-			$('#message').addClass("unsuccessful");
+		if(!messageField.hasClass("unsuccessful")) {
+			messageField.addClass("unsuccessful");
 		}
-		messagefield.setAttribute("placeholder", "Message is required");
+		messageField.prop("placeholder", "Message is required");
 	}
 };
 
 function confirmEmail() {
-	var email = document.getElementById("email").value;
-	var emailfield = document.getElementById("email");
+	var email = $('#email').val();
+	var emailField = $('#email');
 	if(email){
 	    var atpos = email.indexOf("@");
 		var dotpos = email.lastIndexOf(".");
 		if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=email.length) {
-			if(!$('#email').hasClass("unsuccessful")) {
-				$('#email').addClass("unsuccessful");
+			if(!emailField.hasClass("unsuccessful")) {
+				emailField.addClass("unsuccessful");
 				if(emailAlert == false){
 					emailAlert = true;
 					//alert('Email address is not valid');
-					if(!$('#email').hasClass("unsuccessful")) {
-						$('#email').addClass("unsuccessful");
+					if(!emailField.hasClass("unsuccessful")) {
+						emailField.addClass("unsuccessful");
 					}
 				}
 			}
 		}
 		else {
 			emailVerified = true;
-			if($('#email').hasClass("unsuccessful")){
-				$('#email').removeClass("unsuccessful");
+			if(emailField.hasClass("unsuccessful")){
+				emailField.removeClass("unsuccessful");
 			}
 		}
 	}
 	else {
-		if(!$('#email').hasClass("unsuccessful")) {
-			$('#email').addClass("unsuccessful");
+		if(!emailField.hasClass("unsuccessful")) {
+			emailField.addClass("unsuccessful");
 		}
-		emailfield.setAttribute("placeholder", "Email address is required");
+		emailField.prop("placeholder", "Email address is required");
 	}
 };
 
