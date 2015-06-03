@@ -149,11 +149,23 @@ a.slider-link:hover{
 	padding-left:55px;
 	padding-right:55px;
 }
+.smallheading{
+	display: none;
+}
+.bigheading{
+	display: block;
+}
 }
 @media (max-width:449px){
 .nav-wrapper{
 	padding-left:20px;
 	padding-right:20px;
+}
+.smallheading{
+	display: block;
+}
+.bigheading{
+	display: none;
 }
 }
 @media (min-width: 755px) {
