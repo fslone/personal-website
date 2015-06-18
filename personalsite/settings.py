@@ -24,7 +24,7 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = ['.ericslone.io']
+ALLOWED_HOSTS = ['.flemingslone.com']
 
 
 # Application definition

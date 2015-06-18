@@ -5,8 +5,7 @@
   <head>
     <meta charset="utf-8">
     <title>{% block title %}{% endblock %}</title>
-	<meta name="description" content="Eric writes code.">
-	<meta name="keywords" content="eric, slone, eric slone, thoughtblox, thought blox, thoughtblocks, thought blocks, dinnercrunch, dinner crunch, stockpro, stock, pro">
+	<meta name="description" content="Fleming writes code.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	
 	<!-- Loading CSS -->
@@ -34,7 +33,7 @@
     $(function(){
 
         $("#typed").typed({
-            strings: ["Eric creates websites.", "Eric develops applications.", "Eric writes code."],
+            strings: ["Fleming writes code."],
             typeSpeed: 10,
             backDelay: 1200,
             loop: false,
@@ -64,15 +63,12 @@
   <div class="nav-wrapper">
     <div class="pull-left nav-name">
 		<a href="{% url 'users.views.index' %}" class="nav-name">
-			Eric Slone
+			Fleming Slone
 		</a>
 	</div>
 	<div class="pull-right">
 		<a href="{% url 'users.views.journal' %}" class="nav-buttons" {% if pagetitle == 'Journal' %}style="color:#c83424;"{% endif %}>
 			Journal
-		</a>
-		<a href="{% url 'users.views.tools' %}" class="nav-buttons" {% if pagetitle == 'Tools' %}style="color:#c83424;"{% endif %}>
-			Tools
 		</a>
 		<a href="{% url 'users.views.projects' %}" class="nav-buttons" {% if pagetitle == 'Projects' %}style="color:#c83424;"{% endif %}>
 			Projects
@@ -145,28 +141,24 @@
   <!--******************** FOOTER ********************-->
   <div class="footer">
 	<div class="footer-left">
-		&copy; {% now 'Y' %} Eric Slone.<br />
+		&copy; {% now 'Y' %} Fleming Slone.<br />
 		<a href="/project/site/" class="footer-links">Built</a> on <a href="https://www.djangoproject.com/" class="footer-links" target="_blank">Django</a> in <a href="http://www.midtownatl.com/" class="footer-links" target="_blank">Midtown ATL</a>.<br />
 	</div>
 	<div class="footer-right">
-		<a href="https://www.linkedin.com/pub/eric-slone/38/109/986" class="footer-links" target="_blank">
+		<a href="https://www.linkedin.com/in/fslone" class="footer-links" target="_blank">
 			<span class="fa fa-linkedin-square social-icons"  style="padding-left:0px;">
 			</span>
 		</a>
-		<a href="https://instagram.com/eric.slone/" class="footer-links" target="_blank">
+		<a href="https://instagram.com/betatype/" class="footer-links" target="_blank">
 			<span class="fa fa-instagram social-icons">
 			</span>
 		</a>
-		<a href="https://github.com/ericslone" class="footer-links" target="_blank">
+		<a href="https://github.com/fslone" class="footer-links" target="_blank">
 			<span class="fa fa-github-square social-icons">
 			</span>
 		</a>
-		<a href="https://twitter.com/ericwritescode" class="footer-links" target="_blank">
+		<a href="https://twitter.com/betatype" class="footer-links" target="_blank">
 			<span class="fa fa-twitter-square social-icons">
-			</span>
-		</a>
-		<a href="http://www.piedpiper.com/" class="footer-links" target="_blank">
-			<span class="fa fa-pied-piper social-icons">
 			</span>
 		</a>
 	</div>
@@ -176,13 +168,14 @@
   <!-- Analytics -->
   <script>
   
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-	
-	ga('create', 'UA-62462248-1', 'auto');
-	ga('send', 'pageview');
+  	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-64248236-1', 'auto');
+	  ga('send', 'pageview');
+
 
   </script>
   

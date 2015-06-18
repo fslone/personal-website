@@ -30,16 +30,6 @@ def journal(request):
   context['pagetitle'] = 'Journal'
   context['articles'] = Article.objects.all().order_by('-id')
   return render(request, 'users/journal.html', context)
-
-def tools(request):
-  context = dict()
-  context['pagetitle'] = 'Tools'
-  return render(request, 'users/tools.html', context)
-  
-def social_media(request):
-  context = dict()
-  context['pagetitle'] = 'Tools'
-  return render(request, 'users/social-media-generator.html', context)
   
 def article(request, postid, articleslug):
   context = dict()
@@ -58,7 +48,7 @@ def contact(request):
   email = request.POST['email']
   message = request.POST['message']
   send_content = "Name: " + name + "\n\nEmail: " + email + "\n\nMessage: " + message
-  send_mail('Contact Form', send_content, 'Eric Slone <eric@ericslone.io>', ['eric@ericslone.io'], fail_silently=False)
+  send_mail('Contact Form', send_content, 'Fleming Slone <fslone@gmail.com>', ['fslone@gmail.com'], fail_silently=False)
   context['pagetitle'] = 'Connect'
   return render(request, 'users/thanks.html', context)
   
